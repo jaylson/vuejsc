@@ -14,7 +14,7 @@
         <p> {{frutas[1]}} </p>
         <p> Aluno: {{ aluno.nome}} </p>
         <p> {{ 1 + num1 }} </p>
-        <p> {{ fun() }} </p>
+        <p> {{ metodo(2) }} </p>
 
     </div>
 
@@ -31,10 +31,12 @@
                     ehverdade: true,
                     frutas: ['Abacaxi','Banana','Maçã','Uva'],
                     aluno: {nome : 'Paula'},
-                    num1: 1,
-                    fun: () => {
-                        return 'Olá Vue!'
-                    }
+                    num1: 1
+                },
+                methods: {
+                    metodo(indice) {
+                        return 'Fruta: ' + this.frutas[indice];
+                    },
                 }
             }
         )
