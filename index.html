@@ -9,7 +9,13 @@
 <body>
 
     <div id="app">
-        {{message}}
+        <p> {{message}} </p>
+        <p> {{ehverdade ? 'Verdade' : 'False'}} </p>
+        <p> {{frutas[1]}} </p>
+        <p> Aluno: {{ aluno.nome}} </p>
+        <p> {{ 1 + num1 }} </p>
+        <p> {{ fun() }} </p>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -21,7 +27,14 @@
             {
                 el: '#app',
                 data: {
-                    message: 'Hello Vue!'
+                    message: 'Hello Vue!',
+                    ehverdade: true,
+                    frutas: ['Abacaxi','Banana','Maçã','Uva'],
+                    aluno: {nome : 'Paula'},
+                    num1: 1,
+                    fun: () => {
+                        return 'Olá Vue!'
+                    }
                 }
             }
         )
